@@ -291,7 +291,8 @@ function renderQuestion() {
   const q = questions[currentQ];
   document.getElementById('attempt-badge').textContent = attempt === 1 ? '1ª Tentativa' : '2ª Tentativa';
   document.getElementById('q-counter').textContent = `${currentQ + 1} / ${questions.length}`;
-  document.getElementById('progress-bar').style.width = `${((currentQ) / questions.length) * 100}%`;
+  //document.getElementById('progress-bar').style.width = `${((currentQ) / questions.length) * 100}%`;
+  document.getElementById('progress-bar').style.width = `${((currentQ + 1) / questions.length) * 100}%`;
   document.getElementById('q-number').textContent = `Pergunta ${currentQ + 1}`;
   document.getElementById('q-text').textContent = q.q;
   document.getElementById('feedback-area').classList.add('hidden');
@@ -357,13 +358,17 @@ function nextQuestion() {
   currentQ++;
   if (currentQ >= questions.length) {
     document.getElementById('progress-bar').style.width = '100%';
-    // Calcular score aqui
-    scores[attempt - 1] = 0;
-    for (let i = 0; i < questions.length; i++) {
-      if (window.quizAnswers[i] === questions[i].ans) {
-        scores[attempt - 1]++;
-      }
-    }
+    // Calcular score aqui (Qualquer coisa voltar o codigo anterior aqui)
+   scores[attempt - 1] = questions.reduce((total, question, index) => {
+    return total + (window.quizAnswers[index] === question.ans ? 1 : 0);
+   }, 0);
+   
+   // scores[attempt - 1] = 0;
+   // for (let i = 0; i < questions.length; i++) {
+    //  if (window.quizAnswers[i] === questions[i].ans) {
+      //  scores[attempt - 1]++;
+     //}
+    //}
     
     if (attempt === 1) {
       showBetween();
@@ -400,15 +405,16 @@ function finishQuiz() {
 function showResult() {
   const best = Math.max(scores[0], scores[1] || 0);
   const pct = Math.round((best / questions.length) * 100);
-  const nota = (best / questions.length * 10).toFixed(1);
-
+  //const nota = (best / questions.length * 10).toFixed(1);
+  const nota = (best * 0.5).toFixed(1);
+  
   document.getElementById('result-name').textContent = studentName;
   document.getElementById('result-score').textContent = nota;
 
   const details = document.getElementById('result-details');
-  let detailsHTML = `<div class="text-center"><p class="text-2xl font-700 text-indigo-400">${scores[0]}/15</p><p class="text-slate-500">1ª Tentativa</p></div>`;
+  let detailsHTML = `<div class="text-center"><p class="text-2xl font-700 text-indigo-400">${scores[0]}/${questions.length}</p><p class="text-slate-500">1ª Tentativa</p></div>`;
   if (attempt === 2) {
-    detailsHTML += `<div class="text-center"><p class="text-2xl font-700 text-purple-400">${scores[1]}/15</p><p class="text-slate-500">2ª Tentativa</p></div>`;
+    detailsHTML += `<div class="text-center"><p class="text-2xl font-700 text-purple-400">${scores[1]}/${questions.length}</p><p class="text-slate-500">2ª Tentativa</p></div>`;
   }
   details.innerHTML = detailsHTML;
 
