@@ -36,11 +36,11 @@
       <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-4" style="background:linear-gradient(135deg,#6366f1,#a855f7);">
        <i data-lucide="brain" style="width:40px;height:40px;color:#fff;"></i>
       </div>
-      <h1 id="title-text" class="text-3xl md:text-4xl font-800 text-white mb-4">Avaliação Bimestral de Inteligência Artificial</h1>
+      <h1 id="title-text" class="text-3xl md:text-4xl font-800 text-white mb-4">Avaliação Bimestral de Informática</h1>
       <h1 class="text-3xl md:text-3xl font-800 text-white mb-2">Curso Técnico em Informática</h1>
       <h1 class="text-3xl md:text-2xl font-800 text-white mb-2">Prof. Nicolau Adad</h1>
-      <h1 class="text-3xl md:text-2xl font-800 text-white mb-4">Data: 07/05/2026</h1>
-      <p id="welcome-text" class="text-slate-400 text-lg">Avaliação sobre IA! Você tem 2 tentativas para obter a melhor nota.</p>
+      <h1 class="text-3xl md:text-2xl font-800 text-white mb-4">Data: 01/07/2026</h1>
+      <p id="welcome-text" class="text-slate-400 text-lg">Você tem 2 tentativas para obter a melhor nota.BOA SORTE!!</p>
      </div>
      <div class="bg-slate-800/60 rounded-2xl p-6 backdrop-blur border border-slate-700/50 mb-4">
       <label for="student-name" class="block text-left text-sm font-500 text-slate-300 mb-2">Seu nome completo</label> <input id="student-name" type="text" placeholder="Digite seu nome aqui..." class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-600 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 text-lg">
@@ -105,44 +105,46 @@
   </div>
   <script>
 const questions = [
+ 
+ { q:"O que é Hardware:", opts:["Um programa de Computador","A parte Fisica do Computador","Um sistema operacional","Um antivirus"], ans:2 },
   
-  { q:"Quando um banco detecta uma compra suspeita no seu cartão, ele pode usar:", opts:["Sorte","IA analisando comportamento de consumo","Apenas humanos","Um sistema offline","Regras fixas que nunca mudam"], ans:1 },
+ { q:"O que é software:", opts:["Os componentes fisicos do computador","O Monitor","Os programas utilizados pelo computador","O teclado"], ans:3 },
+   
+ { q:"Qual dispositivo é considerado de saída:", opts:["Scanner","Mouse","Monitor","Teclado"], ans:3 },
   
-  { q:"Deepfake é:", opts:["Um tipo de vírus","Um erro de câmera","Um conteúdo falso criado com IA (imagem ou vídeo)","Um aplicativo de edição comum","Um filtro de foto"], ans:2 },
+ { q:"Qual a principal funçao da CPU:", opts:["Armazenar arquivos","Processar Informaçoes","Exibir imagens","Imprimir Documentos"], ans:2 },
   
-  { q:"A Inteligência Artificial aprende principalmente por:", opts:["Sorte","Tentativa única","Dados e exemplos","Opinião de pessoas","Adivinhação"], ans:2 },
+ { q:"Qual combinaçao copia um texto selecionado:", opts:["CTRL + X","CTRL + C","CTRL + V","CTRL + Z"], ans:2 },
+   
+ { q:"Qual combinacao cola um conteudo copiado:", opts:["CTRL + C","CTRL + A","CTRL + V","CTRL + X"], ans:3 },
+   
+ { q:"Qual combinacao desfaz a ultima ação:", opts:["CTRL + Z","CTRL + V","CTRL + A","CTRL + S"], ans:1 },
+  
+ { q:"Qual extensao normalmente identifica um documento Word:", opts:[".jpg",".mp3",".docx",".xlsx"], ans:3 },
+  
+ { q:"Qual a extensao identifica uma planilha do excel:", opts:[".pptx",".xlsx",".docx",".pdf"], ans:2 },
+  
+ { q:"O que é um arquivo pdf:", opts:["Um arquivo de audio","um arquivo de imagem","um formato para documentos","um navegador"], ans:3 },
+  
+ { q:"O que é um antivirus:", opts:["Um navegador","Um programa de proteção contra ameaças digitais.","Um editor de texto","um sistema operacional"], ans:2 },
+  
+ { q:"O que significa WWW:", opts:["World Wide Web","Windows World Web","Web Wordl Window","Wide Window Web"], ans:1 },
+ 
+ { q:"Qual destes dispositivos armazena arquivos:", opts:["HD (Disco Rigido ou Hard Disk)","Mouse","Monitor","Webcam"], ans:1 },
 
-  { q:"Quando um aplicativo de mapas sugere um caminho mais rápido, ele:", opts:["Escolhe uma rota aleatória","Usa IA analisando trânsito e histórico","Sempre escolhe o caminho mais longo","Funciona sem internet","Usa apenas sorte"], ans:1 },
+ { q:"O que significa fazer Download:", opts:["enviar um arquivo","apagar um arquivo","baixar um arquivo da internet","compactar um arquivo"], ans:3 },
+
+ { q:"O que significa fazer upload:", opts:["baixar arquivos","enviar arquivos para internet","excluir arquivos","renomear arquivos"], ans:2 },
+
+ { q:"Qual pratica ajuda a proteger o computador:", opts:["Compartilhar senhas","desativar o antivirus","manter o sistema sempre atualizado","abrir qualquer anexo de email"], ans:3 },
+
+ { q:"Qual a funçao principal da memoria RAM:", opts:["Armazenar arquivos permanentemente","Processar imagens","Armazenar temporariamente os dados em uso pelos programas.","conectar o computador a internet"], ans:3 },
+
+ { q:"Qual das memorias abaixo é considerada volatil:", opts:["ROM","SSD","HD","RAM"], ans:4 },
   
-  { q:"O reconhecimento facial em celulares serve para:", opts:["Decorar rostos sem uso","Melhorar a bateria","Identificar a pessoa para desbloquear","Compartilhar fotos automaticamente","Enviar dados para redes sociais"], ans:2 },
-  
-  { q:"Quando você digita algo no Google e ele completa a frase, isso é:", opts:["Coincidência","IA prevendo o que você quer escrever","Erro do sistema","Um vírus","Digitação automática sem lógica"], ans:1 },
-  
-  { q:"Quando o YouTube sugere vídeos parecidos com os que você já assistiu, isso é um exemplo de:", opts:["Hackers monitorando seu celular","Inteligência Artificial aprendendo suas preferências","Falha do sistema","Vídeos aleatórios","Programação manual sem dados"], ans:1 },
-  
-  { q:"Um chatbot como o ChatGPT consegue conversar porque:", opts:["Tem consciência humana","Foi programado para repetir frases fixas","Usa modelos de linguagem treinados com dados","Está conectado a uma pessoa real","Só responde perguntas simples"], ans:2 },
-  
-  { q:"Quando a Netflix recomenda filmes, ela:", opts:["Escolhe aleatoriamente","Usa IA baseada no seu histórico","Mostra sempre os mesmos filmes","Usa apenas lançamentos","Ignora o usuário"], ans:1 },
-  
-  { q:"Assistentes como a Alexa conseguem responder perguntas porque:", opts:["Decoram tudo manualmente","Usam Inteligência Artificial para entender comandos","São operados por pessoas escondidas","Só funcionam com perguntas exatas","Não usam dados"], ans:1 },
-  
-  { q:"O que é um algoritmo, de forma simples?", opts:["Um tipo de robô","Um vírus digital","Um conjunto de instruções para resolver um problema","Um aplicativo","Um banco de dados"], ans:2 },
-  
-  { q:"Uma IA precisa de quê para aprender?", opts:["Energia elétrica apenas","Dados (informações)","Tela grande","Internet rápida","Teclado"], ans:1 },
-  
-  { q:"O reconhecimento de voz serve para:", opts:["Desligar o celular","Entender o que você fala","Melhorar o som","Gravar vídeos","Aumentar volume"], ans:1 },
-  { q:"IA está presente em:", opts:["Apenas computadores antigos","Apenas robôs industriais","Muitos aplicativos do dia a dia","Apenas jogos","Nenhum lugar"], ans:2 },
-  
-  { q:"Treinar uma IA significa:", opts:["Instalar um programa","Ensinar com dados e exemplos","Ligar o computador","Atualizar o sistema","Reiniciar o aparelho"], ans:1 },
-  
-  { q:"Qual destes é um cuidado importante ao usar IA?", opts:["Confiar em tudo sem verificar","Nunca usar tecnologia","Verificar informações e fontes","Compartilhar dados pessoais livremente","Ignorar resultados"], ans:2 },
-  
-  { q:"Quando você pede para o celular definir um alarme por voz, isso usa:", opts:["Rádio","Inteligência Artificial","Internet apenas","Bluetooth","Bateria extra"], ans:1 },
-  
-  { q:"Quando o Instagram mostra posts que você gosta, ele está:", opts:["Mostrando qualquer coisa","Usando IA para entender seu gosto","Travando","Sendo controlado por pessoas","Mostrando anúncios aleatórios"], ans:1 },
-  
-  { q:"O que a IA faz em aplicativos de música como o Spotify?", opts:["Cria músicas ao vivo sempre","Sugere músicas que você pode gostar","Apaga músicas","Só toca rádio","Não usa IA"], ans:1 },
-  { q:"Quando o celular sugere palavras enquanto você digita, isso é:", opts:["Um erro","Inteligência Artificial","Vírus","Internet lenta","Configuração manual"], ans:1 }
+ { q:"Qual componente é responsável por interligar a CPU, a memória e os demais dispositivos do computador:", opts:["Fonte de Alimentação","Placa-mae","Gabinete","Monitor"], ans:1 },
+
+ { q:"Qual das alternativas descreve corretamente a diferença entre HD e SSD:", opts:["O SSD possui partes mecânicas e o HD não","O HD é mais rápido que o SSD","O SSD utiliza memória flash, oferecendo maior velocidade e menor tempo de acesso aos dados","Não existe diferença entre HD e SSD"], ans:3 }
 ];
 
 const letters = ['A','B','C','D','E'];
